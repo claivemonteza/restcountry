@@ -1,0 +1,127 @@
+::ng-deep {
+  .mat-dialog-container{
+    background:var(--d-element);
+  }
+}
+
+.dialog-header{
+  background-color:var(--d-element);
+  //border-bottom: 1px solid #dadce0;
+  //box-sizing: border-box;
+  display: table;
+  //padding: 0px;
+  table-layout: fixed;
+  width: 100%;
+}
+
+
+
+.dialog-header-title{
+  display: table-cell;
+  position: relative;
+  vertical-align: middle;
+}
+
+.dialog-title{
+    margin-left: 26px;
+    font-size: 1.875rem;
+    font-weight: bold;
+    letter-spacing: 0;
+    line-height: 1.75rem;
+    color: #21b1dd;
+    word-wrap: break-word;
+}
+
+.dialog-header-action .mat-icon{
+  color:var(--d-text);
+}
+
+.dialog-content{
+  max-height: 86%;/*340px*/
+  overflow: auto;
+  position: relative;
+  padding: 20px 25px;
+  @media (min-width: 376px) {
+      display: flex;
+      justify-content: space-between;
+      img {
+        width: 50%;
+      }
+    }
+}
+
+.mat-dialog-actions {
+    padding: 0px 0;
+}
+
+.dialog-header-action{
+  display: table-cell;
+  position: relative;
+  vertical-align: middle;
+  text-align: right;
+  width: 5%;
+  height: 40px;
+}
+
+.dialog-content-subheader{
+  font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.dialog-content-details{
+  display: table;
+  table-layout: fixed;
+ //width: 100%;
+   @media (min-width: 376px) {
+    
+      justify-content: space-between;
+      img {
+        width: 80%;
+      }
+    }
+}
+
+.content-item{
+  display: table;
+    table-layout: fixed;
+    width: 100%;
+}
+
+.content-row{
+  display: table-row;
+}
+
+.content-label{
+  display: table-cell;
+    overflow: hidden;
+    padding: 6px 0;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    text-align: end;
+    min-width: 60px;
+    width: 140px;
+}
+
+.content-value{
+  display: table-cell;
+    overflow: hidden;
+    padding: 6px 0;
+    text-overflow: ellipsis;
+    vertical-align: top;
+    padding-left: 15px;
+}
+
+.content-label, .content-value{
+  color:var(--d-text);
+}
+
+
+
+.mat-typography {
+  font: 400 20px/20px Roboto, "Helvetica Neue", sans-serif;
+  letter-spacing: normal;
+}
