@@ -8,7 +8,7 @@ presentes na API (https://restcountries.eu).
 Podendo exportar as informações dos países para o formato XLS, CSV e XML.
 
 <div align="center">
-  <img alt="image" src="https://github.com/claivemonteza/restcountry/blob/master/RestCountries.png">
+  <img alt="image" src="https://github.com/claivemonteza/restcountry/blob/main/RestCountries.png">
 </div>
 
 ## Development server
