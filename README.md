@@ -17,7 +17,7 @@ Run `ng serve` for a dev server.
 Navigate to `http://localhost:4200/`.
 
 # Live Site
-https://claivemonteza.github.io/restcountry
+https://restcountry-1d555.firebaseapp.com/
 
 
 
