@@ -1,0 +1,56 @@
+<mat-toolbar fxFlexLayout="row wrap" fxLayoutGap="20px">
+    <div class='left'>
+        <h1>REST Countries</h1>
+        <ul>
+            <li><a class="fa fa-github" href='https://github.com/claivemonteza/restcountry.git'>View the project</a>
+            </li>
+        </ul>
+    </div>
+    <mat-form-field>
+        <mat-label>Search</mat-label>
+        <mat-icon matPrefix>search</mat-icon>
+        <input matInput placeholder="" (keyup)="applyFilter($event.target.value)" >
+    </mat-form-field>
+    <div class="right" fxFlexLayout="row" fxLayoutAlign="center">
+        <app-export></app-export>
+        <app-dropdown placeholder="Filter by Region" [values]="regionOptions" [value]="regionFilter"></app-dropdown>
+    </div>
+    <div class="theme" (click)="toogleTheme()">
+        <span class="fa fa-moon-o"></span>
+        {{' '}}
+        <span> Dark mode</span>
+      </div>
+</mat-toolbar>
+
+<div class="container">
+    <table mat-table [dataSource]="dataSource">
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef> Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="capital">
+            <th mat-header-cell *matHeaderCellDef> Capital </th>
+            <td mat-cell *matCellDef="let element"> {{element.capital}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="population">
+            <th mat-header-cell *matHeaderCellDef> Population </th>
+            <td mat-cell *matCellDef="let element"> {{element.population}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="area">
+            <th mat-header-cell *matHeaderCellDef> Area </th>
+            <td mat-cell *matCellDef="let element"> {{element.area}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="flag">
+            <th mat-header-cell *matHeaderCellDef> Flag </th>
+            <td mat-cell *matCellDef="let element"> <img src="{{element.flag}}" alt="" width="50" height="40" srcset="">
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns;"></tr>
+        <tr mat-row (click)="openDialog(row)" *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>

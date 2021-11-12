@@ -1,0 +1,89 @@
+<div class="dialog-header">
+    <div class="dialog-header-title">
+        <div class="dialog-title" role="heading">
+            {{ data.name }}
+        </div>
+    </div>
+    <div class="dialog-header-action" mat-dialog-actions>
+        <button mat-icon-button mat-dialog-close matTooltip="Close">
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>
+</div>
+<div class="dialog-content mat-typography">
+    <img [src]="data.flag" />
+    <div class="dialog-content-details">
+        <div class="content-item">
+            <div class="content-row">
+                <div class="content-label">
+                    Capital:
+                </div>
+                <div class="content-value">
+                    {{ data.capital }}
+                </div>
+            </div>
+        </div>
+        <div class="content-item">
+            <div class="content-row">
+                <div class="content-label">
+                    Region:
+                </div>
+                <div class="content-value">
+                    {{ data.region }}
+                </div>
+            </div>
+        </div>
+        <div class="content-item">
+            <div class="content-row">
+                <div class="content-label">
+                    Subregion:
+                </div>
+                <div class="content-value">
+                    {{ data.subregion }}
+                </div>
+            </div>
+        </div>
+        <div class="content-item">
+            <div class="content-row">
+                <div class="content-label">
+                    Population:
+                </div>
+                <div class="content-value">
+                    {{ data.population }}
+                </div>
+            </div>
+        </div>
+        <div class="content-item">
+            <div class="content-row">
+                <div class="content-label">
+                    Area:
+                </div>
+                <div class="content-value">
+                    {{ data.area }}
+                </div>
+            </div>
+        </div>
+        <div class="content-item">
+            <div class="content-row">
+                <div class="content-label">
+                    Native name:
+                </div>
+                <div class="content-value">
+                    {{ data.nativeName }}
+                </div>
+            </div>
+        </div>
+        <div class="content-item">
+            <div class="content-row">
+                <div class="content-label">
+                    Timezone:
+                </div>
+                <div *ngFor="let timezone of  data.timezones">
+                    <div class="content-value">
+                        {{timezone}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

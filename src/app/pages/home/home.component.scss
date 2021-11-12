@@ -1,0 +1,270 @@
+table {
+  width: 100%;
+  padding: 104px -1px 20px;
+  td.mat-cell {
+    border-bottom-style: none;
+  }
+}
+
+.theme{
+  cursor: pointer;
+  font-size: 15px;
+}
+
+th,
+td {
+  font-size: medium;
+}
+
+tr.mat-header-row {
+  position: sticky;
+  top: 64px;
+}
+
+tr.mat-row,
+tr.mat-footer-row {
+  height: 48px;
+  cursor: pointer;
+}
+
+mat-toolbar {
+  display: flex;
+  position: sticky;
+  top: 0;
+  padding: 20px;
+
+  @media (min-width: 376px) {
+    margin: 0rem 0rem;
+    padding-bottom: 0px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.left {
+  padding-top: 0.4rem;
+}
+
+.right {
+  display: inherit;
+}
+
+.left h1 {
+  // -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-weight: bold;
+  font-family: montserrat, sans-serif;
+  font-size: 16px;
+}
+
+.left ul,
+.left li {
+  display: block;
+  float: left;
+}
+
+.left li a:hover {
+  color: #21b1dd;
+}
+
+.left li a {
+  font-size: 0.6em;
+  display: block;
+
+  @media (min-width: 376px) {
+    .left li a {
+      text-decoration: none;
+    }
+  }
+}
+
+@media (min-width: 480px) {
+  .left h1 {
+    float: left;
+    color: #21b1dd;
+  }
+  .left ul {
+    margin-left: -15px;
+  }
+  .left h1 + ul {
+    margin-left: 15px;
+  }
+  .left li:last-child {
+    border-right: 0;
+  }
+  .left li a {
+    padding: 4px 10px;
+    text-decoration: none;
+    margin-top: 4px;
+  }
+}
+
+.fa-github::before {
+  content: "\f09b";
+  font-size: 14px;
+  color: #21b1dd;
+}
+
+mat-form-field {
+  width: 45%;
+  font-size: medium;
+}
+
+mat-form-field mat-icon {
+  font-size: 11pt;
+}
+
+mat-icon {
+  color: #21b1dd;
+}
+
+.mat-input-element::placeholder {
+  color: var(--d-text);
+}
+
+.mat-toolbar .mat-focused {
+  color: #21b1dd;
+}
+
+
+.mat-form-field-underline ::-moz-focus-inner {
+  background-color: #21b1dd;
+}
+
+.mat-toolbar .mat-form-field-underline ::-moz-focus-outer {
+  background-color: #21b1dd;
+}
+
+.mat-toolbar .mat-form-field-underline,
+.mat-toolbar .mat-form-field-ripple,
+.mat-toolbar .mat-focused .mat-form-field-ripple {
+  background-color: #21b1dd;
+}
+
+.mat-menu-panel {
+  margin-top: 15px;
+  margin-left: -11px;
+}
+
+.mat-menu-content:not(:empty) {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+th.mat-header-cell {
+  border-bottom-width: 2px;
+  border-bottom-style: solid;
+  border-bottom-color: #21b1dd;
+}
+
+:host-context(.light) {
+  table {
+    td.mat-cell {
+      border-color: var(--l-element);
+    }
+    background-color: var(--l-element);
+  }
+
+  th,
+  td {
+    color: var(--l-text);
+  }
+
+  mat-toolbar {
+    background: var(--l-element);
+    color: var(--l-text);
+  }
+
+  .left li a {
+    color: var(--l-text);
+  }
+
+  .left h1 + ul {
+    border-left: solid 1px var(--l-text);
+  }
+
+  mat-form-field-label,
+  mat-label {
+    color: var(--l-text);
+  }
+
+  .mat-input-element::placeholder {
+    color: var(--l-text);
+  }
+
+  .mat-form-field.mat-focused .mat-form-field-label {
+    color: var(--l-text);
+  }
+
+  .mat-form-field.appearence-legacy .mat-form-field-label {
+    color: var(--l-text);
+  }
+
+  .mat-toolbar .mat-input-element {
+    caret-color: var(--l-text);
+  }
+
+  .mat-input-element {
+    color: var(--l-text);
+  }
+
+  .mat-stroked-button:not(.mat-button-disabled) {
+    border-color: var(--l-element);
+  }
+}
+
+:host-context(.dark) {
+  table {
+    td.mat-cell {
+      border-color: var(--d-element);
+    }
+    background-color: var(--d-element);
+  }
+
+  th,
+  td {
+    color: var(--d-text);
+  }
+
+  mat-toolbar {
+    background: var(--d-element);
+    color: var(--d-text);
+  }
+
+  .left li a {
+    color: var(--d-text);
+  }
+
+  .left h1 + ul {
+    border-left: solid 1px var(--d-text);
+  }
+
+  mat-form-field-label,
+  mat-label {
+    color: var(--d-text);
+  }
+
+  .mat-input-element::placeholder {
+    color: var(--d-text);
+  }
+
+  .mat-form-field.mat-focused .mat-form-field-label {
+    color: var(--d-text);
+  }
+
+  .mat-form-field.appearence-legacy .mat-form-field-label {
+    color: var(--d-text);
+  }
+
+  .mat-toolbar .mat-input-element {
+    caret-color: var(--d-text);
+  }
+
+  .mat-input-element {
+    color: var(--d-text);
+  }
+
+  .mat-stroked-button:not(.mat-button-disabled) {
+    border-color: var(--d-element);
+  }
+}
