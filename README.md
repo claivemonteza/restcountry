@@ -4,7 +4,7 @@ Esta aplicação foi desenvolvido em [Angular CLI](https://github.com/angular/an
 
 É um cliente REST que permite obter e visualizar as informações de propriedades dos países (nome, capital, 
 região, sub-região, população, área, fuso horário, nome nativo e o link para visualizar a bandeira)
-presentes na API (https://restcountries.eu). 
+presentes na API (https://restcountries.com/). 
 Podendo exportar as informações dos países para o formato XLS, CSV e XML.
 
 <div align="center">
