@@ -13,7 +13,7 @@
     </mat-form-field>
     <div class="right" fxFlexLayout="row" fxLayoutAlign="center">
         <app-export></app-export>
-        <app-dropdown placeholder="Filter by Region" [values]="regionOptions" [value]="regionFilter"></app-dropdown>
+        <app-dropdown  (filter)="filter($event)"></app-dropdown>
     </div>
     <div class="theme" (click)="toogleTheme()">
         <span class="fa fa-moon-o"></span>
@@ -23,7 +23,7 @@
 </mat-toolbar>
 
 <div class="container">
-    <table mat-table [dataSource]="dataSource">
+    <table mat-table [dataSource]="dataSource" >
         <ng-container matColumnDef="name">
             <th mat-header-cell *matHeaderCellDef> Name </th>
             <td mat-cell *matCellDef="let element"> {{element.name}} </td>

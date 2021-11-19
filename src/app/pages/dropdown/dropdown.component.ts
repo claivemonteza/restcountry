@@ -1,4 +1,8 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Country } from 'src/app/model/country.model';
+
+
+const REGION_OPTIONS = ['All', 'Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
 
 @Component({
   selector: 'app-dropdown',
@@ -6,21 +10,14 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./dropdown.component.scss'],
 })
 export class DropdownComponent {
+  regionOptions = REGION_OPTIONS;
   
-  @Input()
-  placeholder: string;
-
-  @Input()
-  values: string[];
-
-  @Input()
-  value: string;
-
   @Output()
-  valueChange: EventEmitter<string> = new EventEmitter();
+  filter = new EventEmitter<string>();
 
-  select(value: string) {
-    this.valueChange.emit(value);
+
+  select(filter: string) {
+    this.filter.emit(filter);
   }
 
 }
