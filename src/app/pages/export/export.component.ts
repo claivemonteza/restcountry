@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter, OnInit } from '@angular/core';
-import { Country } from 'src/app/model/Country.model';
+import { Country } from '../../model/Country.model';
 
 import { CountryService } from '../../services/country/country.service';
 import { ExporterService } from '../../services/exporter/exporter.service';
